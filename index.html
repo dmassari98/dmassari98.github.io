@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniele Massari</title>
+    <meta name="Description" CONTENT="Questo è il sito vetrina di Daniele Massari. Studente di ingegneria informatica e grande appassionato di tecnologia.">
+    <!-- Foglio di stile principale -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Foglio di stile per la scroll bar-->
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@250&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <navbar>
+            <div class="navbar">
+                <p><i class="fa fa-code"></i> Daniele Massari</p>
+                <ul class="list">
+                    <li onclick="chisono()">chi sono</li>
+                    <li onclick="competenze()">competenze</li>
+                    <li onclick="contattami()">contattami</li>
+                </ul>
+            </div>
+        </navbar>
+    </header>
+    <section>
+        <div class="section1">
+            <div class="intro">
+                <h1>Ciao!</h1>
+                <p>
+                    Mi chiamo <span class="name">Daniele Massari</span>,<br /> sono uno studente di ingegneria informatica<br/> e appassionato di tecnologia.
+                </p>
+                <div id="btn_c_me" onclick="contattami()">Contattami</div>
+        </div>
+    </section>
+    <!-- Section 2 da fare -->
+    <section id="competenze">
+        <div class="container">
+            <h1 class="title">Competenze</h1>
+            <button id="btn-right" onclick="scrollright()">></button>
+            <button id="btn-left"><</button>
+            <div class="section3" id="carousel">
+                <div class="box">
+                    <div class="element">
+                        <img src="img/frontend.png" alt="">
+                        <h2>Front-End<br>web development</h2>
+                    </div>
+                    <p>Ottime conoscenze di HTML5, CSS con nozioni di Responsive web Design, e JavaScript.<br>
+                        <br>Certificazioni conseguite su SoloLearn:
+                        <br><a href="https://www.sololearn.com/Certificate/1014-23596526/jpg" target="_blank">Certificazione HTML5 ></a>
+                        <br><a href="https://www.sololearn.com/Certificate/1023-23596526/jpg" target="_blank">Certificazione CSS ></a>
+                        <br><a href="https://www.sololearn.com/Certificate/1162-23596526/jpg" target="_blank">Certificazione Responsive Web Design ></a>
+                    </p>
+                </div>
+            
+                <div class="box">
+                    <div class="element">
+                        <img src="img/java.png" alt="">
+                        <h2>Java</h2>
+                    </div>
+                    <p>Ho un'eccellente padronanza del linguaggio Java, approfondita durante il percorso universitario con l'esame di Algoritmi e Strutture Dati in Java.</p>
+                    <br>
+                        <br><a href="https://www.sololearn.com/certificates/course/en/23596526/1068/landscape/png" target="_blank">Certificazione Java ></a></p>
+                </div>
+                <div class="box">
+                    <div class="element">
+                        <img src="img/office.png" alt="">
+                        <h2>Pacchetto Office</h2>
+                    </div>
+                    <p>Ottime conoscenze nell'utilizzo del pacchetto Office, Libre office (Open Source) e dei documenti google.</p>
+                </div>
+                <div class="box">
+                    <div class="element">
+                        <img src="img/os.png" alt="">
+                        <h2>Sistemi operativi</h2>
+                    </div>
+                    <p>Conoscenza approfondita della struttura generica di un Sistema operativo con approfondimenti su Linux, sistemi operativi mobile (Android e iOS) e ROS (Robot Operating System).</p>
+                </div>
+                <div class="box">
+                    <div class="element">
+                        <img src="img/android.png" alt="">
+                        <h2>Android</h2>
+                    </div>
+                    <p>Posseggo una conoscenza approfondita del sistema operativo Android e ho esperienza significativa nello sviluppo di applicazioni mediante l'utilizzo di Android Studio.</p>                </div>
+                <div class="box">
+                    <div class="element">
+                        <img src="img/software.png" alt="">
+                        <h2>Ingegneria del<br>Software</h2>
+                    </div>
+                    <p>Posseggo solide competenze nell'ambito dell'Ingegneria del Software, che spaziano dalla redazione della documentazione e progettazione del software, fino al controllo qualità, seguendo le adeguate metodologie.</p>                </div>
+                <div class="box">
+                    <div class="element">
+                        <img src="img/database.png" alt="">
+                        <h2>Database </h2>
+                    </div>
+
+                    <p>Posseggo una profonda competenza nel campo dei database, sia dal punto di vista architetturale che dal punto di vista del software (DBMS). Ho eccellenti capacità nella progettazione di database relazionali e padronanza dei linguaggi SQL e PL/SQL. Inoltre, ho familiarità con database NoSQL, come ad esempio il Firebase Realtime Database.</p>                </div>
+                <div class="box">
+                    <div class="element">
+                        <img src="img/english.png" alt="">
+                        <h2>Inglese</h2>
+                    </div>
+                    <p>Ottima conoscenza della lingua inglese</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contattami">
+        <h1 class="title">Contattami</h1>
+        <p>Per metterti in contatto, puoi compilare il modulo sottostante o inviarmi un'email all'indirizzo <a href="mailto:dnlmss98@gmail.com">dnlmss98@gmail.com</a>.</p>
+        <form action="./php/mailer.php" id="contact" method="POST">
+            <input type="text" placeholder="Nome" name="name">
+            <input type="email" placeholder="Email" name="email">
+            <textarea placeholder="Messaggio..." rows="5" style="resize: none" name="body"></textarea>
+            <button type="submit">Invia messaggio</button>
+        </form>  
+    </section>
+    <footer>
+        <div class="wrapper">
+            <div class="icon linkedin" onclick="window.open('https://www.linkedin.com/in/danielemassari98/')">
+              <div class="tooltip">Linkedin</div>
+              <span><i class="fa fa-linkedin"></i></span>
+            </div>
+            <div class="icon github" onclick="window.open('https://github.com/dmassari98')">
+              <div class="tooltip">Github</div>
+              <span><i class="fa fa-github"></i></span>
+            </div>
+        </div>
+        <p class="cpright">Sito interamente sviluppato da Daniele Massari </p>
+    </footer>
+
+    <!-- Sito in costruzione-->
+    <div class="workInProgress">
+        <p>Attenzione:</p><p>Sito web in costruzione.</p>
+    </div>
+
+    <!-- JavaScript-->
+    <script>
+        function chisono(){
+            var scrollDiv = document.getElementById("chisono").offsetTop;
+            window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
+        }
+        function competenze(){
+            var scrollDiv = document.getElementById("competenze").offsetTop;
+            window.scrollTo({ top: scrollDiv-70, behavior: 'smooth'});
+        }
+        function contattami(){
+            var scrollDiv = document.getElementById("contattami").offsetTop;
+            window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
+        }
+
+    (function(w){
+        w.addEventListener('load', function(){
+        const   btn_left = document.getElementById('btn-left'),
+                btn_right = document.getElementById('btn-right'),
+                content = document.getElementById('carousel');
+        const content_scroll_width = content.scrollWidth;
+        let content_scoll_left = content.scrollLeft;
+        btn_right.addEventListener('click', () => {
+            content_scoll_left += content.offsetWidth;                
+            if (content_scoll_left >= content_scroll_width) { content_scoll_left = content_scroll_width; }
+            content.scrollLeft = content_scoll_left;
+        });
+        btn_left.addEventListener('click', () => {
+            content_scoll_left -= content.offsetWidth;
+            if (content_scoll_left <= 0) {
+                content_scoll_left = 0;
+            }
+            content.scrollLeft = content_scoll_left;
+            });
+        });
+    })(window);
+
+
+    </script>
+</body>
+</html>
