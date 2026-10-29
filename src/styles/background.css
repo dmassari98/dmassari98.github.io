@@ -1,0 +1,14 @@
+/* Sfondo animato: nuvole, pioggia, lampi */
+.layer{position:fixed;inset:0;pointer-events:none;transition:opacity 1.2s}
+#storm{background:linear-gradient(180deg,#8d949e,#aab0b8 60%,#c3c8ce);opacity:0}
+body.rain #storm{opacity:1}
+.cloud{position:absolute;border-radius:50%;filter:blur(38px);background:radial-gradient(closest-side,rgba(90,96,106,.95),rgba(110,116,126,0));
+  width:60vw;height:26vh;animation:drift linear infinite}
+.c1{top:-6vh;left:-10vw;animation-duration:70s}
+.c2{top:2vh;left:30vw;width:70vw;animation-duration:95s;animation-direction:reverse;opacity:.9}
+.c3{top:-8vh;left:60vw;animation-duration:80s}
+.c4{top:8vh;left:5vw;width:50vw;animation-duration:110s;opacity:.7}
+@keyframes drift{from{transform:translateX(-12vw)}50%{transform:translateX(12vw)}to{transform:translateX(-12vw)}}
+#rain{position:fixed;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.2s}
+body.rain #rain{opacity:1}
+#flash{background:radial-gradient(ellipse at 50% 0%,#fff,rgba(255,255,255,.6) 60%,rgba(255,255,255,.2));opacity:0;z-index:2}

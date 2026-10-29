@@ -1,0 +1,7 @@
+/* Reset e stili globali */
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,sans-serif;color:var(--text);
+  background:linear-gradient(160deg,var(--bg1),var(--bg2));overflow:hidden;transition:background .6s}
+button{font:inherit;color:inherit;border:0;cursor:pointer}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}

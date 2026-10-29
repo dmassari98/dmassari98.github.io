@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Pomodoro timer con suoni rilassanti, ispirato al design Apple.">
+  <title>Pomodoro</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- Sfondo animato -->
+  <div class="layer" id="storm">
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div><div class="cloud c4"></div>
+  </div>
+  <canvas id="rain"></canvas>
+  <div class="layer" id="flash"></div>
+
+  <!-- Menu -->
+  <button class="round" id="burger" aria-label="Menu">
+    <svg class="i" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg>
+  </button>
+  <div id="menu">
+    <div class="row"><label>Focus <b id="fv">25 min</b></label><input type="range" id="focus" min="1" max="60" value="25"></div>
+    <div class="row"><label>Pausa <b id="bv">5 min</b></label><input type="range" id="brk" min="1" max="30" value="5"></div>
+    <div class="sounds">
+      <button class="vs" data-s="rain" aria-label="Pioggia"><i class="fill"></i><svg class="i" viewBox="0 0 24 24"><path d="M7 13a4.5 4.5 0 0 1-.5-9A6 6 0 0 1 18 5a4 4 0 0 1-1 8z"/><path d="M8 17h.01M12 17h.01M16 17h.01M10 20.5h.01M14 20.5h.01"/></svg></button>
+      <button class="vs" data-s="thunder" aria-label="Tuoni"><i class="fill"></i><svg class="i" viewBox="0 0 24 24"><path d="M7 14a4.5 4.5 0 0 1-.5-9A6 6 0 0 1 18 6a4 4 0 0 1-1 8"/><path d="M12 11l-3 5h4l-2 5"/></svg></button>
+      <button class="vs" data-s="wind" aria-label="Vento"><i class="fill"></i><svg class="i" viewBox="0 0 24 24"><path d="M3 8h10a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7a2.5 2.5 0 1 1-2.5 2.5"/></svg></button>
+    </div>
+    <details class="credits">
+      <summary>Crediti</summary>
+      <p>Rain sound effect Sound Effect by <a href="https://pixabay.com/users/dragon-studio-38165424/" target="_blank" rel="noopener noreferrer">DRAGON-STUDIO</a></p>
+    </details>
+  </div>
+
+  <!-- Timer -->
+  <main>
+    <div class="card">
+      <svg viewBox="0 0 280 280"><circle class="track" cx="140" cy="140" r="120"/><circle class="prog" id="prog" cx="140" cy="140" r="120"/></svg>
+      <div class="center"><div class="mode" id="mode">Focus</div><div class="time" id="time">25:00</div></div>
+    </div>
+    <div class="controls">
+      <button class="btn icon" id="reset" aria-label="Reset"><svg class="i" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg></button>
+      <button class="btn main" id="start">Avvia</button>
+      <button class="btn icon" id="skip" aria-label="Salta"><svg class="i" viewBox="0 0 24 24"><path d="M6 5l9 7-9 7zM19 5v14"/></svg></button>
+    </div>
+  </main>
+
+  <!-- Controlli di pagina -->
+  <div id="pal"></div>
+  <button class="round" id="grad" aria-label="Colore sfondo"></button>
+  <div id="signature">Realizzato da Daniele Massari con Claude AI</div>
+  <button class="round" id="mute" aria-label="Muta suoni"><svg class="i" viewBox="0 0 24 24" id="muteIcon"></svg></button>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

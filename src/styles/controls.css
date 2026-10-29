@@ -1,0 +1,8 @@
+/* Pulsanti tondi fissi agli angoli e firma */
+.round{position:fixed;z-index:6;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;padding:0;
+  background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--glass-b);box-shadow:var(--shadow)}
+#burger{top:calc(env(safe-area-inset-top,0px) + 18px);left:18px}
+#mute{bottom:calc(env(safe-area-inset-bottom,0px) + 18px);right:18px}
+#grad{bottom:calc(env(safe-area-inset-bottom,0px) + 18px);left:18px;border:2px solid rgba(255,255,255,.85)}
+#signature{position:fixed;z-index:4;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);
+  font-size:11px;letter-spacing:.02em;opacity:.45;text-align:center;max-width:calc(100vw - 150px);pointer-events:none}

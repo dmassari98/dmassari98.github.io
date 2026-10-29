@@ -1,0 +1,24 @@
+/* Menu espandibile: slider durata, slider suoni, crediti */
+#menu{position:fixed;z-index:5;top:calc(env(safe-area-inset-top,0px) + 78px);left:18px;width:min(320px,calc(100vw - 36px));padding:22px;border-radius:28px;
+  background:var(--glass);backdrop-filter:blur(40px) saturate(180%);-webkit-backdrop-filter:blur(40px) saturate(180%);
+  border:1px solid var(--glass-b);box-shadow:var(--shadow);transform-origin:top left;
+  transform:scale(.85) translateY(-8px);opacity:0;visibility:hidden;transition:all .35s cubic-bezier(.2,.9,.3,1.1)}
+#menu.open{transform:none;opacity:1;visibility:visible}
+.row{margin-bottom:20px}
+.row label{display:flex;justify-content:space-between;font-size:14px;color:var(--sub);margin-bottom:10px;font-weight:500}
+.row label b{color:var(--text);font-weight:600}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:3px;background:var(--track);outline:0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+
+.sounds{display:flex;gap:10px;justify-content:space-between;margin-top:4px}
+.vs{position:relative;flex:1;max-width:64px;height:150px;border-radius:22px;background:rgba(128,128,140,.25);overflow:hidden;display:flex;align-items:flex-end;justify-content:center;padding:0 0 14px;touch-action:none;cursor:pointer}
+.vs .fill{position:absolute;left:0;right:0;bottom:0;height:0;background:rgba(255,255,255,.92);transition:height .08s}
+.vs svg{position:relative;width:24px;height:24px;color:#6b6b76}
+.vs:focus-visible{outline:2px solid var(--accent)}
+
+.credits{margin-top:18px;font-size:12px;color:var(--sub)}
+.credits summary{cursor:pointer;list-style:none;font-weight:500;text-align:center;padding:4px}
+.credits summary::-webkit-details-marker{display:none}
+.credits p{margin:8px 0 0;line-height:1.45;text-align:center}
+.credits a{color:var(--text);text-decoration:underline;text-underline-offset:2px}

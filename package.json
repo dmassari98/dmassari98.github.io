@@ -1,0 +1,14 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "description": "Pomodoro timer con suoni rilassanti e design ispirato ad Apple.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes serve src",
+    "build": "node scripts/build.mjs",
+    "preview": "npx --yes serve dist",
+    "clean": "node scripts/build.mjs --clean"
+  },
+  "engines": { "node": ">=18" }
+}
